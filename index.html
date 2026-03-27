@@ -1,6 +1,110 @@
-<h1>My Arcade</h1>
-<ul>
-  <li><a href="run.html">Play Snake</a></li>
-  <li><a href="space-invaders.html">Play Space Invaders</a></li>
-  <li><a href="tetris.html">Play Tetris</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Arcade</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --neon-blue: #58a6ff;
+            --neon-purple: #bc8cff;
+            --text: #c9d1d9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        li {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 15px rgba(188, 140, 255, 0.3);
+        }
+
+        a {
+            display: block;
+            padding: 2rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        a:hover {
+            color: var(--neon-purple);
+        }
+
+        /* Subtle AI glow effect */
+        .badge {
+            font-size: 0.7rem;
+            display: block;
+            margin-top: 8px;
+            color: #8b949e;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Arcade</h1>
+
+    <ul>
+        <li>
+            <a href="run.html">
+                Play Snake
+                <span class="badge">AI Assisted</span>
+            </a>
+        </li>
+        <li>
+            <a href="space-invaders.html">
+                Space Invaders
+                <span class="badge">AI Assisted</span>
+            </a>
+        </li>
+        <li>
+            <a href="tetris.html">
+                Play Tetris
+                <span class="badge">AI Assisted</span>
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>
